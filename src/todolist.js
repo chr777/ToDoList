@@ -1,22 +1,25 @@
 import React from 'react';
+import './todolist.css';
 
 const Todos = ({todos, deleteTodo}) => {
 
     const todoList = todos.length ? (
       todos.map(todo => {
         return (
-          <div className="item" key={todo.id}>
-            <span onClick={() => {deleteTodo(todo.id)}}>{todo.message}</span>
-          </div>
+          <li className="item" key={todo.id}>
+            <span>{todo.message}</span>
+            <span id = "delate" onClick={() => {deleteTodo(todo.id)}}>x</span>
+            
+          </li>
         )
       })
     ) : (
       <p className="center">There is no To Do left</p>
     );
     return (
-      <div className="todos">
+      <ul className="todos">
         {todoList}
-      </div>
+      </ul>
     )
   }
   export default Todos;

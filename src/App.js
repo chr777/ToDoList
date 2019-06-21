@@ -6,7 +6,7 @@ import './App.css';
 class App extends Component {
   state = {
     todos: [
-      {id: 1, message: 'do homeworks'},
+      {id: 1, message: 'do homework'},
       {id: 2, message: 'play games'}
 
     ]
@@ -23,10 +23,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="todolist list_container">
-        <h1 className="text">Todo's</h1>
-        <Todos todos={this.state.todos}  />
+      <div className="container">
+        <h1 className="text">To Do List</h1>
+        <div className="list">
+          <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+        </div>
       </div>
+      
     );
   }
 }

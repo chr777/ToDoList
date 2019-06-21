@@ -5,16 +5,16 @@ const Todos = ({todos, deleteTodo}) => {
     const todoList = todos.length ? (
       todos.map(todo => {
         return (
-          <div className="collection-item" key={todo.id}>
-            <span onClick={() => {deleteTodo(todo.id)}}>{todo.content}</span>
+          <div className="item" key={todo.id}>
+            <span onClick={() => {deleteTodo(todo.id)}}>{todo.message}</span>
           </div>
         )
       })
     ) : (
-      <p className="center">You have no todo's left, yay!</p>
+      <p className="center">There is no To Do left</p>
     );
     return (
-      <div className="todos collection">
+      <div className="todos">
         {todoList}
       </div>
     )

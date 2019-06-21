@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Todos from './todolist'
 
 import './App.css';
 
@@ -23,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="todolist list_container">
-        <h1 className="center text">Todo's</h1>
+        <h1 className="text">Todo's</h1>
         <Todos todos={this.state.todos}  />
       </div>
     );

@@ -10,5 +10,27 @@
     background-color: #f44336;
     color: black;
   }
+  input {
+    margin-top: 5px;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: center;
+    font-size: 16px;
+  }
 
-  
+  .addBtn {
+    margin-top: 5px;
+    padding: 10px;
+    width: 25%;
+    background: #0e0959;
+    color: white  ;
+    float: right;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 0;
+  }

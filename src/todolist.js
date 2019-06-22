@@ -9,12 +9,14 @@ const Todos = ({todos, deleteTodo}) => {
           <li className="item" key={todo.id}>
             <span>{todo.message}</span>
             <span id = "delate" onClick={() => {deleteTodo(todo.id)}}>x</span>
-            
           </li>
         )
       })
     ) : (
-      <p className="center">There is no To Do left</p>
+        <li>
+            <span>There is no To Do left</span>          
+        </li>
+      
     );
     return (
       <ul className="todos">

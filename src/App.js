@@ -8,9 +8,8 @@ import './App.css';
 class App extends Component {
   state = {
     todos: [
-      {id: 1, message: 'do homework'},
-      {id: 2, message: 'play games'}
-
+      {id: 1, message: 'do homework', isInEditMode: false},
+      {id: 2, message: 'play games', isInEditMode: false}
     ]
   }
 
@@ -30,6 +29,24 @@ class App extends Component {
     });
   }
 
+  // changeEditMode = () => {
+  //   this.setState({
+  //     isInEditMode: !this.state.isInEditMode 
+  //   })
+  // }
+
+  // renderEditView = () => {
+  //   return (
+  //     <div className="container">
+  //       <h1 className="text">To Do List</h1>
+  //       <div className="list">
+  //         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+  //         <Addtodo addtodo={this.addtodo}/>
+  //       </div>
+  //     </div>
+  //   )
+  // }
+
   render() {
     return (
       <div className="container">
@@ -38,8 +55,7 @@ class App extends Component {
           <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
           <Addtodo addtodo={this.addtodo}/>
         </div>
-      </div>
-      
+      </div>      
     );
   }
 }

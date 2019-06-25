@@ -6,10 +6,10 @@ class Addtodo extends Component{
     state = {
         message: ''
       }
-      handleChange = (e) => {
-        this.setState({
-            message: e.target.value
-        });
+      handleChange = (e) => {        
+            this.setState({
+                message: e.target.value
+            });    
       }
       handleSubmit = (e) => {
         e.preventDefault();
@@ -23,7 +23,7 @@ class Addtodo extends Component{
           <div>
             <form onSubmit={this.handleSubmit}>             
               <input type="text" placeholder="Type new To Do here and press enter..." onChange={this.handleChange} value={this.state.message} />
-              <span onClick={this.handleSubmit} class="addBtn">Add</span>
+              <span onClick={this.handleSubmit} className="addBtn" onChange={this.handleChange} value={this.state.message} >Add</span>
             </form>
           </div>
         )
